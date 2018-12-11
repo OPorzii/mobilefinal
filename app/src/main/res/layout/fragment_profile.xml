@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/inp_p_age"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="age"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/inp_p_name"
+        tools:layout_editor_absoluteX="36dp" />
+
+    <EditText
+        android:id="@+id/inp_p_pass"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/inp_p_age"
+        tools:layout_editor_absoluteX="36dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inp_p_quote" />
+
+    <EditText
+        android:id="@+id/inp_p_user"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="user Id"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inp_p_name"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/inp_p_user"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <EditText
+        android:id="@+id/inp_p_quote"
+        android:layout_width="313dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Quote"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/inp_p_pass"
+        tools:layout_editor_absoluteX="36dp" />
+</android.support.constraint.ConstraintLayout>
