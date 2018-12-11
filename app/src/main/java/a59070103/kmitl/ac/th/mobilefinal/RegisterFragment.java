@@ -18,6 +18,7 @@ public class RegisterFragment extends Fragment {
 
 
     private MyDB myDB;
+    private int ageInt;
 
     private EditText _inpUserid, _inpName, _inpPass, _inpAge;
 
@@ -43,7 +44,6 @@ public class RegisterFragment extends Fragment {
 
     void initRegisterBtn() {
 
-
         final Button regisBtn = getActivity().findViewById(R.id.btn_register);
         regisBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +59,6 @@ public class RegisterFragment extends Fragment {
                 String userStr = _inpUserid.getText().toString();
                 String nameStr = _inpName.getText().toString();
                 String ageStr = _inpAge.getText().toString();
-
                 String passStr = _inpPass.getText().toString();
 
 
@@ -76,7 +75,7 @@ public class RegisterFragment extends Fragment {
 
                     } else if (ageStr.matches("[0-9]+")) {
                         Toast.makeText(getActivity(), "ใส่อายุเป็นตัวเลขเเท่านั้น", Toast.LENGTH_SHORT).show();
-                        int ageInt = Integer.parseInt(ageStr);
+                        ageInt = Integer.parseInt(ageStr);
                         if(ageInt >= 10 && ageInt <= 80){
                             Toast.makeText(getActivity(), "ใส่ช่วง 10-80 เท่านั้น", Toast.LENGTH_SHORT).show();
                         }
