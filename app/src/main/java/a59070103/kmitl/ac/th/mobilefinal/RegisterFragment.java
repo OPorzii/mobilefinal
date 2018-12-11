@@ -59,7 +59,7 @@ public class RegisterFragment extends Fragment {
                 String userStr = _inpUserid.getText().toString();
                 String nameStr = _inpName.getText().toString();
                 String ageStr = _inpAge.getText().toString();
-                int ageInt = Integer.parseInt(ageStr);
+
                 String passStr = _inpPass.getText().toString();
 
 
@@ -74,9 +74,14 @@ public class RegisterFragment extends Fragment {
                     } else if(userStr.length() < 6 && userStr.length() > 12) {
                         Toast.makeText(getActivity(), "User ต้องมีขนาด 6-12 ตัวอักษร", Toast.LENGTH_SHORT).show();
 
-                    } else if (ageStr.matches("[0-9]+") && ageInt >= 10 && ageInt <= 80) {
+                    } else if (ageStr.matches("[0-9]+")) {
+                        Toast.makeText(getActivity(), "ใส่อายุเป็นตัวเลขเเท่านั้น", Toast.LENGTH_SHORT).show();
+                        int ageInt = Integer.parseInt(ageStr);
+                        if(ageInt >= 10 && ageInt <= 80){
+                            Toast.makeText(getActivity(), "ใส่ช่วง 10-80 เท่านั้น", Toast.LENGTH_SHORT).show();
+                        }
 
-                        Toast.makeText(getActivity(), "ใส่อายุเป็นตัวเลขเเท่านั้น และอยู่ในช่วง 10-80", Toast.LENGTH_SHORT).show();
+
 
                     } else if(!nameStr.contains(" ")){
                             Toast.makeText(getActivity(), "ต้องใส่ ชื่อ เว้นวรรค นามสกุล", Toast.LENGTH_SHORT).show();
